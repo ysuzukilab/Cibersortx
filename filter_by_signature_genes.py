@@ -5,7 +5,7 @@ import pandas as pd
 
 '''
 could've used shell script
-python filter_by_sig_genes.py ../output/signature_matrix/CIBERSORTx_Job15_MCA_liver_cell_expression_phenotype_inferred_refsample.txt ../input/MCA_liver_cell_expression_phenotype.tsv
+
 python filter_by_sig_genes.py ../output/signature_matrix/CIBERSORTx_Job15_MCA_liver_cell_expression_phenotype_inferred_phenoclasses.CIBERSORTx_Job15_MCA_liver_cell_expression_phenotype_inferred_refsample.bm.K999.txt ../input/180627_liver_all_counts.tsv
 '''
 

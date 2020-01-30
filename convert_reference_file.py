@@ -11,8 +11,6 @@ input file 1: expression
 input file 2: classes
 '''
 def main():
-	#s = 'touch classes_matrix.tsv'
-	#subprocess.call(s,shell=True)
 	s1 = 'cat '+ str(sys.argv[1])+ ' | sed -n 1p > classes_matrix.tsv' 
 	subprocess.call(s1,shell=True)
 	s2 = 'cat ' + str(sys.argv[2]) + ' >> classes_matrix.tsv'
@@ -24,19 +22,9 @@ def main():
 			if df.loc[index,column] == 1:
 				dct[column]=index
 	df_exp = pd.read_csv(sys.argv[1],delimiter='\t',index_col=0)
-	#print(df_exp.index.values)
-	#print(dct)
-	'''
-	for key in dct.keys():
-		print(key + '\t' + dct[key])
-
-	
-	return 
-	'''
 	df_exp = df_exp.rename(columns=dct)
 	df_exp.to_csv(sys.argv[1].split('.')[0]+'_phenotype.tsv',sep='\t')
-	#print(df_exp.columns)
-	#return	
+
 	dct_count = {}
 	for key in dct.keys():#key:tag, value:phenotype
 		if dct[key] not in dct_count.keys():
