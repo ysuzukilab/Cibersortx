@@ -1,6 +1,6 @@
-Cibersortx pipeline
+### Cibersortx pipeline
 
-####input files   
+#### input files   
 single cell reference matrix  
 class matrix  
   
