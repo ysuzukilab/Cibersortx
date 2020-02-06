@@ -1,10 +1,13 @@
 ## Cibersortx pipeline
 
 ### Step 1 Signature matrix
-** If each column of 'single cell reference matrix' is a phenotype label, proceed to step 2 **  
-'The reference sample file is an input file required for custom signature genes file generation by CIBERSORT and consists of a table of the gene expression profiles of reference sample cell populations that will be compared to each other as defined in the phenotype classes file (next section) to generate the custom signature genes file. Each column corresponds to the gene expression profile of a reference sample. Multiple replicates of a given reference sample cell type (one in each column) may be used.' (cibersortx)
+**IF** each column of 'single cell reference matrix' is a phenotype label, proceed to step 2   
+```
+<From cibersortx website>  
+The reference sample file is an input file required for custom signature genes file generation by CIBERSORT and consists of a table of the gene expression profiles of reference sample cell populations that will be compared to each other as defined in the phenotype classes file (next section) to generate the custom signature genes file. Each column corresponds to the gene expression profile of a reference sample. Multiple replicates of a given reference sample cell type (one in each column) may be used.'
+```
 
-ELSE,  
+**ELSE** 
 take the following two files and convert them using 'convert_reference_file.py'
 	single cell reference matrix 
 	class matrix  
@@ -13,10 +16,10 @@ take the following two files and convert them using 'convert_reference_file.py'
 python convert_reference_file.py MCA_liver_cell_expression.tsv MCA_liver_cell_class.tsv
 ```
 ### Step 2 Run Cibersortx to create signature matrix  
-~parameters (pro tem)~  
+\:star: parameters (pro tem)  
 Single cell input options:    
 	Min. Expression 0.5
-* Download output signature matrix!
+:exclamation: Download output signature matrix!
 
 
 ### Step 3 Filter Mixure Matrix  
