@@ -57,7 +57,11 @@ cat file.tsv | awk '{print NF}'| sort -nu | tail -n 1
 
 ## Cibersortx validation  
 For validating Cibersortx's results  
-Using single cell data, mix two cell types together and run cibersortx?    
-:dizzy: 50% each? or known cell types ?????????      
-
+Using single cell data, mix two cell types together and run cibersortx.        
+  
+The below command generates an tsv file which may be used as cibersortx input.     
+Each column consists of a 50%-50% mix of two cell type expressions  
+```python  
+python validation.py single_cell_reference_made_in_step_1.tsv
+```
 
