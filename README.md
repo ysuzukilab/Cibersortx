@@ -35,8 +35,9 @@ This creates a new mixture file named {mixture\_file}\_filtered.tsv
   
 ### Step 4 Run Cibersortx to impute cell fractions 
 Upload the Mixture matrix from step 3 to the Cibersortx website, then run fraction imputation  
-:star: default parameters  
-  
+:star: parameters  
+default
+    
 :dizzy:  Memo  
 For the mouse liver data set, 19133+ samples exceeded the 'Allowed memory size of 536870912 bytes'  
 Use something like the following command to divide data set  
@@ -51,5 +52,16 @@ cat mixture_file_filtered.tsv  |  cut -f 1,10002-  > mixture_file_filtered_2.tsv
 And to check the number of columns per file  
 ```bash  
 cat file.tsv | awk '{print NF}'| sort -nu | tail -n 1  
+```
+
+
+## Cibersortx validation  
+For validating Cibersortx's results  
+Using single cell data, mix two cell types together and run cibersortx.        
+  
+The below command generates an tsv file which may be used as cibersortx input.     
+Each column consists of a 50%-50% mix of two cell type expressions  
+```python  
+python validation.py single_cell_reference_made_in_step_1.tsv
 ```
 
