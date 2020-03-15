@@ -19,7 +19,6 @@ def func(df,df_output,celltype1,celltype2):
 			celltype1_list.append(c)
 		elif celltype == celltype2:
 			celltype2_list.append(c)
-	series_1 = df[celltype1_list].sum(axis=1)
 
 	series_1 = df[celltype1_list].sum(axis=1)/len(celltype1_list)
 	series_2 = df[celltype2_list].sum(axis=1)/len(celltype2_list)
