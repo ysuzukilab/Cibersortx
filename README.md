@@ -65,3 +65,7 @@ Each column consists of a 50%-50% mix of two cell type expressions
 python validation.py single_cell_reference_made_in_step_1.tsv
 ```
 
+## Sorting bulks by specific celltype fractions
+Use the following Jupyter Notebook.
+Input file will be a Cibersortx job result file (Default in .txt format).
+> Sort_Cibersortx_output_fractions.ipynb
