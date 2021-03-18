@@ -1,5 +1,5 @@
 # ATTENTION #
-This is NOT the official github page of the Cibersortx team  
+This is **NOT** the official github page of the Cibersortx team  
 Please contact the Cibersortx team (https://cibersortx.stanford.edu/contact.php) for issues with the platform  
 
 
